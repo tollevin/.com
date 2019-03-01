@@ -1,19 +1,23 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# fuckery
+/p5
+:* RSS Channel *:
+
 # dependencies
 /node_modules
 
 # testing
-/coverage
 
 # production
 /build
 
 # bucklescript
 /lib
-/types
 .merlin
 *.bs.js
+
+# netlify
 
 # misc
 .DS_Store
