@@ -13,7 +13,7 @@ let make = (~image, ~company, ~role, ~description, ~achievements, ~website, ~loc
 					</div>
 					<span className="website">(ReasonReact.string(website))</span>
 				</div>
-				<div className="header-group">
+				<div className="header-group role-span">
 					<span className="role">(ReasonReact.string(role))</span>
 					<span className="timespan">(ReasonReact.string(startDate))(ReasonReact.string(" - "))(ReasonReact.string(endDate))</span>
 				</div>

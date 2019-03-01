@@ -275,6 +275,14 @@ nav ul li a {
   margin-bottom: 24px;
 }
 
+.role-span {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 10px;
+}
+
 .project .role {
   font-weight: 300;
   font-size: 21px;
@@ -282,8 +290,6 @@ nav ul li a {
 }
 
 .project .timespan {
-  position: absolute;
-  right: 21px;
   margin-top: 4px;
   font-weight: 300;
   font-family: "Helvetica Neue";
