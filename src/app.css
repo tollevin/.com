@@ -1,8 +1,424 @@
-.App {
-  text-align: center;
+:root {
+  --desktop: 768px; 
+  --tablet: 425px;
+  --nav-width: 100px;
+  --m-nav-height: 85px;
 }
 
-.App-logo {
+#root {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Nav */
+nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: var(--m-nav-height);
+  width: auto;
+  text-align: left;
+  z-index: 100;
+  background: none;
+}
+
+#Logo {
+  height: 50px;
+  width: 50px;
+  margin-top: 10px;
+  margin-left: 8px;
+}
+
+#Logo a, #Logo img {
+  height: 50px;
+  width: 50px;
+}
+
+/* Mobile Hamburger */
+
+#Hamburger {
+  width: 45px;
+  height: 30px;
+  position: absolute;
+  top: 17px;
+  right: 15px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  z-index: 101;
+}
+
+#Hamburger span {
+  display: block;
+  position: absolute;
+  height: 6px;
+  width: 100%;
+  background: #d3531a;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+#Hamburger span:nth-child(1) {
+  top: 0px;
+}
+
+#Hamburger span:nth-child(2) {
+  top: 12px;
+}
+
+#Hamburger span:nth-child(3) {
+  top: 24px;
+}
+
+#Hamburger.open span:nth-child(1) {
+  top: 18px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+#Hamburger.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+#Hamburger.open span:nth-child(3) {
+  top: 18px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+/* END Mobile Hamburger */
+
+#Nav-link-holder {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+  background: rgba(0,0,0,.66);
+}
+
+#Alt-logo {
+  display: none;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 10px;
+  left: 8px;
+}
+
+#Alt-logo a, #Alt-logo img {
+  height: 50px;
+  width: 50px;
+}
+
+.menuOpen {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.menuOpen #Alt-logo {
+  display: block !important;
+}
+
+nav ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 37px;
+}
+
+nav ul li {
+  margin-bottom: 11px;
+}
+
+nav ul li a {
+  font-size: 50px;
+  font-weight: 300;
+  text-decoration: none;
+  color: #FFF;
+}
+
+/* END Nav */
+
+/* Container */
+.container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: #f5f5f5;
+}
+
+/* END Container */
+
+.page {
+  position: relative;
+  top: 60px;
+}
+
+.page-title {
+  margin-top: -11px;
+  margin-left: 60px;
+  color: #666;
+  font-weight: 300;
+  font-size: 30px;
+}
+
+/* Home */
+#Home {
+ top: 0;
+}
+
+#Lander {
+  position: relative;
+  width: fit-content;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+#Lander canvas {
+  transform: translateX(-434px);
+}
+
+#SplashImg {
+  width: 100%;
+  display: none;
+}
+
+#Splash {
+  min-height: 100vh;
+}
+
+/* Work */
+#Work {
+  top: 99px;
+}
+
+#Work h1 {
+  position: fixed;
+  top: 38px;
+  z-index: 2;
+}
+
+.project-previews {
+  position: relative;
+  width: 100%;
+  max-width: 1250px;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-previews .project {
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+}
+
+.header-group {
+  margin-top: 10px;
+}
+
+.project span {
+  margin-left: 24px;
+  display: inline-block;
+}
+
+.project .company {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.project .location {
+  color: #666;
+  font-weight: 300;
+}
+
+.project .website {
+  color: #666;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
+.project .role {
+  font-weight: 300;
+  font-size: 21px;
+  letter-spacing: 1px;
+}
+
+.project .timespan {
+  position: absolute;
+  right: 21px;
+  margin-top: 4px;
+  font-weight: 300;
+  font-family: "Helvetica Neue";
+}
+
+.project .achievements ul {
+  padding-right: 20px;
+}
+
+.project .achievements ul li {
+  font-family: "Helvetica Neue";
+  line-height: 21px;
+  margin-bottom: 3px;
+}
+
+.project .highlights ul {
+  font-family: "Helvetica Neue";
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-left: 21px;
+}
+
+.project .highlights ul li {
+  list-style-type: none;
+  border: 1px solid #FFF;
+  color: #717171;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 3px 5px;
+  margin-right: 8px;
+  margin-bottom: 5px;
+}
+
+/* END Work */
+
+/* Blog */
+
+.post-previews {
+  position: relative;
+  width: 100%;
+  max-width: 1250px;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-preview {
+
+}
+
+.post-preview img {
+  width: 100%;
+  height: auto;
+}
+
+/* END Blog */
+
+
+@media screen and (min-width: 768px) {
+  nav {
+    width: var(--nav-width);
+    bottom: 0;
+    right: auto; 
+    height: auto;
+  }
+
+  #Logo {
+    height: 121px;
+    width: 111px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+
+  #Hamburger {
+    display: none !important;
+  }
+
+  #Nav-link-holder {
+    display: block;
+    position: static;
+    height: auto;
+    background: none;
+  }
+
+  nav ul li a {
+    font-size: 24px;
+    color: #707070;
+  }
+
+  .container {
+    padding-left: var(--nav-width);
+  }
+
+  #Lander {
+    left: -100px;
+  }
+
+  #Lander canvas {
+    transform: translateX(0);
+  }
+
+  .page-title {
+    margin-left: 0;
+    margin-top: 0;
+    /*position: fixed;
+    z-index: 99;*/
+  }
+
+  #Work {
+    top: 0;
+  }
+
+  .project-previews {
+    margin-left: 50px;
+    width: auto;
+  }
+
+  .post-previews {
+    margin-left: 50px;
+    width: auto;
+  }
+}
+
+/* END Container */
+
+/* Home Page */
+
+/* END Home Page */
+
+/*.App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
 }
@@ -30,3 +446,4 @@
     transform: rotate(360deg);
   }
 }
+*/

@@ -1,8 +1,25 @@
+@font-face {
+  font-family: 'BCAlphapipe';
+  font-weight: 400;
+  src: local('BCAlphapipe'), url(./fonts/BC-Alphapipe-Regular.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'BCAlphapipe';
+  font-weight: 300;
+  src: local('BCAlphapipe'), url(./fonts/BC-Alphapipe-Light.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'BCAlphapipe';
+  font-weight: 200;
+  src: local('BCAlphapipe'), url(./fonts/BC-Alphapipe-Thin.woff) format('woff');
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: "BCAlphapipe", "Open Sans",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

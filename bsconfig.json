@@ -1,7 +1,14 @@
 {
   "name": "reason-scripts",
-  "sources": ["src"],
-  "bs-dependencies": ["reason-react", "@glennsl/bs-jest", "bs-fetch"],
+  "sources": {
+    "dir": "src",
+    "subdirs": ["pages","components","ffi"]
+  },
+  "bs-dependencies": [
+    "reason-react",
+    "@glennsl/bs-jest",
+    "bs-fetch"
+  ],
   "reason": {
     "react-jsx": 2
   },
