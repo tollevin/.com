@@ -6,8 +6,7 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-p5-wrapper": "0.0.4",
-    "reason-scripts": "1.0.0",
-    "webpack-dev-server": "^3.1.11"
+    "reason-scripts": "1.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
