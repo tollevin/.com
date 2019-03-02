@@ -186,6 +186,7 @@ let make = (_children) => {
             ref=(self.handle(setCtxRef))
           />
         <img id="SplashImg" ref=(self.handle(setImgRef)) src=splashImg alt="Me on the beach"/>
+        <h2 className="holla">(ReasonReact.string("holla"))</h2>
 			</div>
 			/*<div className="content">
 				<div><h1>(ReasonReact.string("Blah blah blah"))</h1></div>

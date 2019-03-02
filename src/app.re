@@ -8,6 +8,7 @@ type route =
   | Post
   | Work
   | Project
+  | Shop
   | Contact
   | Follow;
 
@@ -23,7 +24,8 @@ let mapUrlToRoute = (url: ReasonReact.Router.url) => {
   | ["blog"] => Blog
   /*| ["blog", id] => handlePost(id)*/
   | ["work"] => Work
-  | ["contact"] => Contact
+  | ["shop"] => Shop
+  | ["contact"] => Home
   | _ => Home /*FIX Create 404*/
   };
 };
@@ -57,7 +59,8 @@ let make = (_children) => {
           /*| Post => <Post id=id/>*/
           | Work => <Work />
           /*| Project => <Project />*/
-          | Contact => <Contact />
+          | Shop => <Shop />
+          | Contact => <Home />
           /*| Follow => <Follow />*/
           }
         )
