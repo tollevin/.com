@@ -3,7 +3,7 @@ let component = ReasonReact.statelessComponent("Project");
 let make = (~image, ~company, ~role, ~description, ~achievements, ~website, ~location, ~startDate, ~endDate, ~highlights, _children) => {
 	...component,
 	render: (_self) =>
-		<div className="project">
+		<div id=company className="project">
 			<img src=image alt=company />
 			<div className="project-header">
 				<div className="header-group">

@@ -11,3 +11,11 @@ let window: window = [%bs.raw "window"];
 [@bs.val] external cancelAnimationFrame : int => unit = "";
 
 external windowToJsObj : window => Js.t({..}) = "%identity";
+
+let listen_to_window: (window, ((float, float)) => unit) => unit = [%bs.raw
+  {|function(window, fn) {
+    window.addEventListener('mousemove', evt => {
+      fn([evt.clientX, evt.clientY])
+    })
+  }|}
+];

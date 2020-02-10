@@ -64,6 +64,9 @@ let make = (_children) => {
           /*| Follow => <Follow />*/
           }
         )
+        <div id="Footer">
+          <p className="foot-tag">(ReasonReact.string("Handcrafted with <3 and ReasonReact"))</p>
+        </div>
       </div>
     </div>,
 };

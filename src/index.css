@@ -16,10 +16,40 @@
   src: local('BCAlphapipe'), url(./fonts/BC-Alphapipe-Thin.woff) format('woff');
 }
 
+@font-face {
+  font-family: 'Avenir';
+  font-weight: 200;
+  src: url(./fonts/avenir-light-webfont.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  font-weight: 300;
+  src: url(./fonts/Avenir-Medium-webfont.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  font-weight: 400;
+  src: url(./fonts/Avenir-Book.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  font-weight: 600;
+  src: url(./fonts/Avenir-Heavy.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  font-weight: 700;
+  src: url(./fonts/Avenir-Black-webfont.woff) format('woff');
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: "BCAlphapipe", "Open Sans",
+  font-family: 'Avenir', "Open Sans",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

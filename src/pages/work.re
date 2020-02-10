@@ -1,3 +1,4 @@
+[@bs.module] external bsaImg : string = "../images/bsaMap.png";
 [@bs.module] external turingImg : string = "./turing.gif";
 [@bs.module] external dm16 : string = "../images/destination_moon_16.jpg";
 
@@ -27,11 +28,30 @@ let make = (_children) => {
 	initialState: () => {
 		projects: [
       {
+        image: bsaImg,
+        company: "BSA",
+        role: "full-stack dev",
+        description: "",
+        achievements: ["created custom components for cross-platform use while adhering to strong brand aesthetic","effectively employed open source solutions","sourced and cleaned a LOT of data"],
+        website: "blacksocialists.us",
+        location: "US",
+        startDate: "Apr '19",
+        endDate: "Present",
+        highlights: [
+          "ux design",
+          "full stack development",
+          "react",
+          "mapbox gl",
+          "mapbox style api",
+          "postgres"
+        ]
+      },
+      {
         image: turingImg,
         company: "Turing",
         role: "Founder",
         description: "",
-        achievements: ["full stack development"],
+        achievements: ["full stack development","creative direction","branding design"],
         website: "turing.nyc",
         location: "NY, NY",
         startDate: "Jan '19",
@@ -54,7 +74,7 @@ let make = (_children) => {
         role: "Co-Founder+CXO",
         description: "",
         achievements: [
-          "end-to-end development a complete user | product experience, from concept to branding design to UI to dining experience to post-use lifecycle design",
+          "end-to-end development of a complete user | product experience, from concept to branding design to UI to dining experience to post-use lifecycle design",
           "full stack development of MVP using Node|Meteor|Mongo",
           "project management of further webdev",
           "creative direction of all styles, assets and content",
@@ -76,7 +96,7 @@ let make = (_children) => {
           "creative direction",
           "food photography",
           "food styling",
-          "packaging",
+          "packaging design",
           "logistics"
         ]
       },
@@ -85,27 +105,34 @@ let make = (_children) => {
         company: "Destination Moon",
         role: "Branding/Creative",
         description: "",
-        achievements: [""],
+        achievements: [
+          "logo and branding design",
+          "led art direction and asset creation",
+        ],
         website: "destinationmoon.us",
         location: "Greater NY",
         startDate: "Apr '16",
         endDate: "Jun '16",
         highlights: [
-          "oenology",
-          "pos & ecommerce",
-          "sales strategy"
+          "branding",
+          "experience design",
+          "art direction"
         ]
       },
       {
         image: "http://myrtleavenue.org/wp-content/uploads/2014/10/Gnarly-Vines-shingle-blog-ready.jpg",
         company: "Gnarly Vines",
-        role: "Project Manager",
+        role: "Operations Manager",
         description: "",
-        achievements: [""],
+        achievements: [
+          "led content creation for website and email campaigns",
+          "managed POS-website integration",
+          "improved SEO through partnerships, schema tags, best practices",
+        ],
         website: "gnarlyvines.com",
         location: "Brooklyn, NY",
-        startDate: "<START_DATE>",
-        endDate: "<END_DATE>",
+        startDate: "'13",
+        endDate: "'14",
         highlights: [
           "oenology",
           "pos & ecommerce",
@@ -120,7 +147,7 @@ let make = (_children) => {
 			<div className="project-previews">
 				(
 					ReasonReact.array(Array.of_list(
-            List.map((project) => <Project image=project.image company=project.company role=project.role description=project.description achievements=project.achievements website=project.website location=project.location startDate=project.startDate endDate=project.endDate highlights=project.highlights />, projects)
+            List.map((project) => <Project key=project.company image=project.image company=project.company role=project.role description=project.description achievements=project.achievements website=project.website location=project.location startDate=project.startDate endDate=project.endDate highlights=project.highlights />, projects)
           ))
         )
       </div>

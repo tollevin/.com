@@ -13,6 +13,7 @@ type image;
 [@bs.val] external document : document = "Document";
 
 [@bs.val] external getWindowWidth : int = "window.innerWidth";
+[@bs.val] external getWindowHeight : int = "window.innerHeight";
 
 [@bs.new] external image : unit => element = "Image";
 
@@ -51,3 +52,19 @@ external appendChild : element => element = "document.body.appendChild";
 external getElementById : (document, string) => option(element) = "";
 
 external keyboardEventToJsObj : keyboardEvent => Js.t({..}) = "%identity";
+
+let listen_for_mouseEvt: (((float, float)) => unit) => unit = [%bs.raw
+  {|function(fn) {
+    window.addEventListener('mousemove', evt => {
+      fn([evt.clientX, evt.clientY])
+    })
+  }|}
+];
+
+let listen_for_touchEvt: (((float, float)) => unit) => unit = [%bs.raw
+  {|function(fn) {
+    window.addEventListener('touchmove', evt => {
+      fn([evt.touches[0].clientX, evt.touches[0].clientY])
+    })
+  }|}
+];
